@@ -7,9 +7,14 @@ int convertRomanToInt(string s);
 
 int main() {
 	string s;
-	cout << "Enter Roman number: ";
-	cin >> s;
-	cout << s << " = " << convertRomanToInt(s) << endl;
+	while (true) {
+		cout << "Enter Roman number or Q to quit: ";
+		cin >> s;
+		if (s == "Q") {
+			break;
+		}
+		cout << s << " = " << convertRomanToInt(s) << endl;
+	}
 
 	return 0;
 }
